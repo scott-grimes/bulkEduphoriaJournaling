@@ -37,7 +37,7 @@ shift+enter
 ********************************************************************/
 
 //Prompt the user to enter the Student ID's
-var studentIDs  = prompt("Please Enter the Student ID's, seperated by commas", "058605, 060964");
+var studentIDs  = prompt("Please Enter the Student ID's, seperated by commas", "000000, 000001");
 
 if (studentIDs == null || studentIDs == "") {
     alert("You canceled this program");
@@ -80,6 +80,7 @@ if(rotation == 1){ loadSingleStudent(); }
 if(rotation ==2){
 createSingleJournalEntry();
 i++;
+console.log("student "+i+" of "+arrayLength+" done.");
 }
 
 rotation++;
