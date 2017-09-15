@@ -14,20 +14,10 @@ Setup:
 
 4) Enter the title of the journal entry and body text into the popup windows
 
-5) Click on the search box and hit enter (leave the box blank).
+5) Begin mashing shift+enter to bulk fill out info. Make sure each operation is completed
+   first, ie. don't mash super fast, each page should load before you hit shift+enter again!
 
-6) When you  that a student's journal entry has been added successfully,
-click on the search box and hit enter again to move on to the next student.
 
-Running the Program:
-
-1) Click on the search box and press shift+enter to auto-fill the next student's ID
-2) Press shift+enter and wait for the students name to appear
-3) Press shift+enter to load the student
-4) Press shift+enter to auto-fill the journal. Confirm that the entry is correct
-5) click on the search box and press shift+enter again, repeat this process
-
-TLDR MASH shift+enter, making sure that the student page is fully loaded each time.
 
 
 ********************************************************************/
