@@ -22,16 +22,12 @@ click on the search box and hit enter again to move on to the next student.
 Running the Program:
 
 1) Click on the search box and press shift+enter to auto-fill the next student's ID
-2) Press enter once and wait for the students name to appear
+2) Press shift+enter and wait for the students name to appear
 3) Press shift+enter to load the student
 4) Press shift+enter to auto-fill the journal. Confirm that the entry is correct
 5) click on the search box and press shift+enter again, repeat this process
 
-TLDR REPEAT THIS PATTERN:
-shift+enter
-enter
-shift+enter
-shift+enter
+TLDR MASH shift+enter, making sure that the student page is fully loaded each time.
 
 
 ********************************************************************/
