@@ -112,7 +112,8 @@ ifrDoc2.getElementById('Tabstrip1_Tab3').click();
 var blerg3= ifrDoc2.getElementById('Tabstrip1_JournalControl_ifrJournal');
 ifrDoc3 = blerg3.contentDocument || blerg3.contentWindow.document;
 ifrDoc3.getElementById('tbbAddNote').click();
-document.getElementById('menuType_miJa103').click();
+document.getElementById('menuType_miJa103').click(); //adds a "note" journal entry
+//document.getElementById('menuType_miJa4').click();   //adds a "parent contact" journal entry
 
 //creates our journal entry
 ifrDoc3.getElementById('txtNoteTitle').value = noteTitle;
