@@ -50,7 +50,11 @@ var ifrDoc = blerg.contentDocument || blerg.contentWindow.document;
 
 var arrayLength = studentIDs.length;
 
-
+// NEW THINGS TO WORK ON
+   // if you are in the iframe for searching the following code auto-searches
+   // $('#tokenfield').tokenfield('createToken', 'students id here');
+   
+   
 var rotation= 0; //every shift-enter command does one of three things:
 // first a search is created, then the link is pressed, then the journal is updated
 
