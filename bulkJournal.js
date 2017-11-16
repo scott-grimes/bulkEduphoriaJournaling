@@ -52,7 +52,7 @@ var arrayLength = studentIDs.length;
 
 // NEW THINGS TO WORK ON
    // if you are in the iframe for searching the following code auto-searches
-   // $('#tokenfield').tokenfield('createToken', 'students id here');
+   // $('#tokenfield').tokenfield('setTokens', 'idhere');
    
    
 var rotation= 0; //every shift-enter command does one of three things:
