@@ -52,7 +52,7 @@ var arrayLength = studentIDs.length;
 
 // NEW THINGS TO WORK ON
    // if you are in the iframe for searching the following code auto-searches
-   // $('#tokenfield').tokenfield('setTokens', 'idhere');
+   // blerg.contentWindow.$('#tokenfield').tokenfield('setTokens', 'studentID');
    
    
 var rotation= 0; //every shift-enter command does one of three things:
