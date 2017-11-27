@@ -1,10 +1,8 @@
 /***************** Eduphoria Bulk Journaling Script ****************
 Author: Scott Grimes
-
 Requirements:
 Google Chrome
 List of Student ID's seperated by commas
-
 Setup:
 1) Open eduphoria and navigate to the students tab in Aware.
 2) Open the Console (cntrl + shift + i) and copy/paste this whole text file into the console then hit enter
@@ -32,7 +30,7 @@ var loadStudent = function(){
         var loadStudentInterval= setInterval(function() {
             try{
                 var searchElement = document.getElementById('_ctl0_ifrSearch');
-                var ifrDoc = searchElement.contentDocument || blerg.contentWindow.document;
+                var ifrDoc = searchElement.contentDocument || searchElement.contentWindow.document;
                 var studentLinks= ifrDoc.getElementById('searchResults').children;
                 if (studentLinks.length>0) {
                     clearInterval(loadStudentInterval);
@@ -121,6 +119,14 @@ var createJournalEntry = function(){
     });
 }
 
+var endMessage = function(){
+    return new Promise(function(resolve, reject) { 
+        setTimeout(function(){alert('Journaling Complete! :D')},1000)
+        resolve();
+    });
+    
+}
+
 // Builds a promise chain, with each student executed in sequence
 var startProgram = function(studentIDs) {
     var pChain = Promise.resolve();
@@ -132,6 +138,7 @@ var startProgram = function(studentIDs) {
                 .then(clickTypeOfNote)
                 .then(createJournalEntry)
         }
+		pChain = pChain.then(endMessage);
 }
 
 
@@ -157,5 +164,3 @@ else{
         }
     }
 }
-
-
