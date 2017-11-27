@@ -143,9 +143,9 @@ var startProgram = function(studentIDs) {
 
 
 //Prompt the user to enter the Student ID's
-var studentIDs  = prompt("Please Enter the Student ID's, seperated by commas", "000000, 000001");
+var studentIDs  = prompt("Please Enter the Student ID's, seperated by commas", "000000,000001");
 
-if (studentIDs == null || studentIDs == "" ||studentIDs == "000000, 000001") {
+if (studentIDs == null || studentIDs == "" ||studentIDs == "000000,000001") {
     alert("You canceled this program");
 }
 else{
