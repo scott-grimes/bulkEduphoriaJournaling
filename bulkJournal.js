@@ -115,6 +115,9 @@ var createJournalEntry = function(){
         ifrDoc3.getElementById('txtNote').value = noteBody;
         ifrDoc3.getElementById('tbbNote').click();
         setTimeout(function(){ }, 2000);
+	console.log('journal '+jcount+' of '+studentIDs.length+ ' finished');
+	jcount++;
+	
         resolve();
     });
 }
@@ -144,6 +147,7 @@ var startProgram = function(studentIDs) {
 
 //Prompt the user to enter the Student ID's
 var studentIDs  = prompt("Please Enter the Student ID's, seperated by commas", "000000,000001");
+var jcount = 1;
 
 if (studentIDs == null || studentIDs == "" ||studentIDs == "000000,000001") {
     alert("You canceled this program");
