@@ -12,6 +12,8 @@ Setup:
 6) At the end a pop-up window will confirm that the script is done
 ********************************************************************/
 
+var WAITTIME = 1000;
+var SHOWJOURNALTIME = 1000;
 
 // Executes a search for a specific student
 var searchStudent = function(studentID) {
@@ -19,7 +21,7 @@ var searchStudent = function(studentID) {
     return new Promise(function(resolve, reject) {
         var searchElement = document.getElementById('_ctl0_ifrSearch');
         searchElement.contentWindow.$('#tokenfield').tokenfield('setTokens', studentID);
-        setTimeout(function(){ }, 1000);
+        setTimeout(function(){ }, WAITTIME);
         resolve();
     });
 }
@@ -36,11 +38,11 @@ var loadStudent = function(){
                     clearInterval(loadStudentInterval);
                     studentLinks[0].click();
                     ifrDoc.getElementById('btnClearSearch').click();
-                    setTimeout(function(){ }, 1000);
+                    setTimeout(function(){ }, WAITTIME/2);
                     resolve();
                 }
             }catch(e){}
-        }, 2000); 
+        }, WAITTIME); 
   });
 }
 
@@ -54,11 +56,11 @@ var clickJournalTab = function(){
             if (ifrDoc2.getElementById('Tabstrip1_Tab3')) {
                 clearInterval(clickJournalTabInterval);
                 ifrDoc2.getElementById('Tabstrip1_Tab3').click();
-                setTimeout(function(){ }, 1000);
+                setTimeout(function(){ }, WAITTIME/2);
                 resolve();
             }
         }catch(e){}
-        }, 2000); 
+        }, WAITTIME); 
     });
 }
 
@@ -74,11 +76,11 @@ var clickAddNote = function(){
             if (ifrDoc3.getElementById('tbbAddNote')) {
                 clearInterval(clickAddNoteInterval);
                 ifrDoc3.getElementById('tbbAddNote').click();
-                setTimeout(function(){ }, 500);
+                setTimeout(function(){ }, WAITTIME/4);
                 resolve();
            }
         }catch(e){}
-        }, 1000); 
+        }, WAITTIME); 
     });
 }
 
@@ -95,11 +97,11 @@ var clickTypeOfNote = function(){
                     clearInterval(clickTypeOfNoteInterval);
                     document.getElementById('menuType_miJa103').click(); //adds a "note" journal entry
                     //document.getElementById('menuType_miJa4').click();   //adds a "parent contact" journal entry
-                    setTimeout(function(){ }, 500);
+                    setTimeout(function(){ }, WAITTIME/2);
                     resolve();
                  }
             }catch(e){}
-        }, 1000);
+        }, WAITTIME);
     });
 }
 
@@ -114,7 +116,7 @@ var createJournalEntry = function(){
         ifrDoc3.getElementById('txtNoteTitle').value = noteTitle;
         ifrDoc3.getElementById('txtNote').value = noteBody;
         ifrDoc3.getElementById('tbbNote').click();
-        setTimeout(function(){ }, 2000);
+        setTimeout(function(){ }, SHOWJOURNALTIME);
 	console.log('journal '+jcount+' of '+studentIDs.length+ ' finished');
 	jcount++;
 	
@@ -124,7 +126,7 @@ var createJournalEntry = function(){
 
 var endMessage = function(){
     return new Promise(function(resolve, reject) { 
-        setTimeout(function(){alert('Journaling Complete! :D')},1000)
+        setTimeout(function(){alert('Journaling Complete! :D')},WAITTIME)
         resolve();
     });
     
