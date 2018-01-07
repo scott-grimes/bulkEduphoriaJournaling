@@ -156,6 +156,7 @@ if (studentIDs == null || studentIDs == "" ||studentIDs == "000000,000001") {
 }
 else{
 	
+    studentIDs = studentIDs.replace(/, /g, ',');
     studentIDs = studentIDs.replace(/ /g, ',');
     studentIDs = studentIDs.split(',');
     for (i = 0; i < studentIDs.length; i++) { 
