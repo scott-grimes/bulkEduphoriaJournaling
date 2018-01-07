@@ -155,7 +155,14 @@ if (studentIDs == null || studentIDs == "" ||studentIDs == "000000,000001") {
     alert("You canceled this program");
 }
 else{
+	
+    studentIDs = studentIDs.replace(/ /g, ',');
     studentIDs = studentIDs.split(',');
+    for (i = 0; i < studentIDs.length; i++) { 
+    if(studentIDs[i].length<6){
+	studentIDs[i] = "0"+studentIDs[i];
+        }
+    }
     var noteTitle= prompt("Please Enter the Title for your Journal Entry", "Title Text");
     if (noteTitle == null || noteTitle == "" || noteTitle == "Title Text") {
         alert("You canceled this program");
